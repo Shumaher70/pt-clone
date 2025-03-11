@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LeftBarWrapper = styled.div`
+export const Wrapper = styled.div`
   position: sticky;
   display: flex;
   flex-direction: column;

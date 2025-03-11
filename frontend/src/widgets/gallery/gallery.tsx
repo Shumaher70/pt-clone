@@ -1,6 +1,7 @@
-import { GalleryItems } from '../constants';
-import { GalleryWrapper } from './gallery.styled';
 import { IItems } from './types';
+import { GalleryItems } from '../constants';
+
+import * as S from './gallery.styled';
 
 //temp
 const items: IItems[] = [
@@ -161,5 +162,5 @@ export const Gallery = () => {
     <GalleryItems key={item.id} item={item} />
   ));
 
-  return <GalleryWrapper>{renderItems}</GalleryWrapper>;
+  return <S.Wrapper>{renderItems}</S.Wrapper>;
 };

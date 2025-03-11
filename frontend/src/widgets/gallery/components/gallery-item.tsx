@@ -1,10 +1,10 @@
-import { IGalleryItems } from '../types';
-import { GalleryItemImage, GalleryItemWrapper } from './gallery-item.styled';
+import { IGalleryItemsProps } from '../types';
+import * as S from './gallery-item.styled';
 
-export const GalleryItems = ({ item }: IGalleryItems) => {
+export const GalleryItems = ({ item }: IGalleryItemsProps) => {
   return (
-    <GalleryItemWrapper height={item.height}>
-      <GalleryItemImage src={item.media} alt={item.media} />
-    </GalleryItemWrapper>
+    <S.ItemWrapper height={item.height}>
+      <S.ItemImage src={item.media} alt={item.media} />
+    </S.ItemWrapper>
   );
 };

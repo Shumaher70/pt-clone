@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchWrapper = styled.div`
+export const Wrapper = styled.div`
   flex: 1;
   background-color: #f1f1f1;
   border-radius: 16px;
@@ -10,7 +10,7 @@ export const SearchWrapper = styled.div`
   gap: 16px;
 `;
 
-export const SearchInput = styled.input`
+export const Input = styled.input`
   flex: 1;
   background-color: transparent;
   border: none;
@@ -18,4 +18,4 @@ export const SearchInput = styled.input`
   font-size: 18px;
 `;
 
-export const SearchImg = styled.img``;
+export const Img = styled.img``;

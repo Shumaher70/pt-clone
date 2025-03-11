@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GalleryWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 16px;

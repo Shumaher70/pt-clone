@@ -5,10 +5,10 @@ export interface IItems {
   width: number;
 }
 
-export interface IGalleryItems {
-  item: IItems;
+export interface IItemWrapper {
+  height: number;
 }
 
-export interface IGalleryItemWrapper {
-  height: number;
+export interface IGalleryItemsProps {
+  item: IItems;
 }

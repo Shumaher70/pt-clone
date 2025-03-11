@@ -1,4 +1,4 @@
-import { LeftBarWrapper, Logo, MenuIcon, MenuIcons } from './left-bar.styled';
+import * as S from './left-bar.styled';
 
 const linkMap = [
   {
@@ -30,19 +30,19 @@ const linkMap = [
 
 export const LeftBar = () => {
   return (
-    <LeftBarWrapper>
-      <MenuIcons>
+    <S.Wrapper>
+      <S.MenuIcons>
         {linkMap.map(({ link, img, alt }) => {
           return (
-            <MenuIcon key={img} href={link}>
-              <Logo src={img} alt={alt} />
-            </MenuIcon>
+            <S.MenuIcon key={img} href={link}>
+              <S.Logo src={img} alt={alt} />
+            </S.MenuIcon>
           );
         })}
-      </MenuIcons>
-      <MenuIcon href="/">
-        <Logo src="/general/settings.svg" alt="messages setting" />
-      </MenuIcon>
-    </LeftBarWrapper>
+      </S.MenuIcons>
+      <S.MenuIcon href="/">
+        <S.Logo src="/general/settings.svg" alt="messages setting" />
+      </S.MenuIcon>
+    </S.Wrapper>
   );
 };

@@ -1,10 +1,10 @@
-import { SearchImg, SearchInput, SearchWrapper } from './search.styled';
+import * as S from './search.styled';
 
 export const Search = () => {
   return (
-    <SearchWrapper>
-      <SearchImg src="/general/search.svg" alt="search icon" />
-      <SearchInput type="test" placeholder="Search" />
-    </SearchWrapper>
+    <S.Wrapper>
+      <S.Img src="/general/search.svg" alt="search icon" />
+      <S.Input type="test" placeholder="Search" />
+    </S.Wrapper>
   );
 };

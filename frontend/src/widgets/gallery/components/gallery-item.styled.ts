@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { IGalleryItemWrapper } from '../types';
+import { IItemWrapper } from '../types';
 
-export const GalleryItemWrapper = styled.div<IGalleryItemWrapper>`
+export const ItemWrapper = styled.div<IItemWrapper>`
   display: flex;
   grid-row-end: span ${(props) => Math.ceil(props.height / 100)};
 `;
 
-export const GalleryItemImage = styled.img`
+export const ItemImage = styled.img`
   width: 100%;
   border-radius: 16px;
   object-fit: cover;
