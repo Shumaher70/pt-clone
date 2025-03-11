@@ -1,5 +1,7 @@
 import { TopBar } from './top-bar/top-bar';
-import { Gallery } from './gallery/gallery';
 import { LeftBar } from './left-bar/left-bar';
 
-export { TopBar, Gallery, LeftBar };
+import { Gallery } from './gallery/gallery';
+import { GalleryItems } from './gallery/components/gallery-item';
+
+export { TopBar, Gallery, GalleryItems, LeftBar };
