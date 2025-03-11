@@ -1,13 +1,6 @@
 import { useState } from 'react';
 
-import {
-  ProfileButtonImg,
-  ProfileButtonLink,
-  ProfileButtonOption,
-  ProfileButtonOptions,
-  ProfileButtonWrapper,
-  ProfileButtonArrowIcon,
-} from './profile-button.styled';
+import * as S from './profile-button.styled';
 
 export const ProfileButton = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -18,23 +11,23 @@ export const ProfileButton = () => {
   };
 
   const auth = currentUser ? (
-    <ProfileButtonWrapper>
-      <ProfileButtonImg src="/general/noAvatar.png" alt="no avatar icon" />
-      <ProfileButtonArrowIcon
+    <S.ButtonWrapper>
+      <S.ButtonImg src="/general/noAvatar.png" alt="no avatar icon" />
+      <S.ButtonArrowIcon
         onClick={openOptionsHandler}
         src="/general/arrow.svg"
         alt="arrow icon"
       />
       {open && (
-        <ProfileButtonOptions>
-          <ProfileButtonOption>Profile</ProfileButtonOption>
-          <ProfileButtonOption>Setting</ProfileButtonOption>
-          <ProfileButtonOption>Logout</ProfileButtonOption>
-        </ProfileButtonOptions>
+        <S.ButtonOptions>
+          <S.ButtonOption>S.</S.ButtonOption>
+          <S.ButtonOption>Setting</S.ButtonOption>
+          <S.ButtonOption>Logout</S.ButtonOption>
+        </S.ButtonOptions>
       )}
-    </ProfileButtonWrapper>
+    </S.ButtonWrapper>
   ) : (
-    <ProfileButtonLink>Login </ProfileButtonLink>
+    <S.ButtonLink>Login </S.ButtonLink>
   );
 
   return <>{auth}</>;

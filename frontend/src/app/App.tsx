@@ -1,4 +1,4 @@
-import { AppContent, AppWrapper } from './app.styled';
+import * as S from './app.styled';
 
 import { Gallery, LeftBar, TopBar } from '../widgets/constants';
 
@@ -6,14 +6,13 @@ import './../app.css';
 
 function App() {
   return (
-    <AppWrapper>
+    <S.Wrapper>
       <LeftBar />
-
-      <AppContent>
+      <S.Content>
         <TopBar />
         <Gallery />
-      </AppContent>
-    </AppWrapper>
+      </S.Content>
+    </S.Wrapper>
   );
 }
 
