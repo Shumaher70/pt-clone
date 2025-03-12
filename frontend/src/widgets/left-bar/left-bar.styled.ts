@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Image } from '../../components/constants';
 
 export const Wrapper = styled.div`
   position: sticky;
@@ -32,7 +33,7 @@ export const MenuIcon = styled.a`
   }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled(Image)`
   height: 24px;
   width: 24px;
 `;

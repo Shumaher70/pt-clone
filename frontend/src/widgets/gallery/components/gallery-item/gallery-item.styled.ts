@@ -1,9 +1,10 @@
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { IItemWrapper } from '../types';
+import { IItemWrapper } from '../../types';
+import { Image } from '../../../../components/constants';
 
-export const ItemImage = styled.img`
+export const SIKImage = styled(Image)`
   width: 100%;
   border-radius: 16px;
   object-fit: cover;

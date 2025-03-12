@@ -12,3 +12,8 @@ export interface IItemWrapper {
 export interface IGalleryItemsProps {
   item: IItems;
 }
+
+export interface IOptimizedHeight {
+  height: number;
+  width: number;
+}

@@ -12,15 +12,15 @@ export const ProfileButton = () => {
 
   const auth = currentUser ? (
     <S.ButtonWrapper>
-      <S.ButtonImg src="/general/noAvatar.png" alt="no avatar icon" />
+      <S.ButtonImg path="/general/noAvatar.png" alt="no avatar icon" />
       <S.ButtonArrowIcon
         onClick={openOptionsHandler}
-        src="/general/arrow.svg"
+        path="/general/arrow.svg"
         alt="arrow icon"
       />
       {open && (
         <S.ButtonOptions>
-          <S.ButtonOption>S.</S.ButtonOption>
+          <S.ButtonOption>Profile</S.ButtonOption>
           <S.ButtonOption>Setting</S.ButtonOption>
           <S.ButtonOption>Logout</S.ButtonOption>
         </S.ButtonOptions>
