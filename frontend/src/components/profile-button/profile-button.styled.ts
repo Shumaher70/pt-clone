@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Image } from '../constants';
 
 export const ButtonWrapper = styled.div`
   position: relative;
@@ -11,14 +12,14 @@ export const ButtonWrapper = styled.div`
   }
 `;
 
-export const ButtonImg = styled.img`
+export const ButtonImg = styled(Image)`
   height: 36px;
   width: 36px;
   border: 100%;
   object-fit: cover;
 `;
 
-export const ButtonArrowIcon = styled.img`
+export const ButtonArrowIcon = styled(Image)`
   cursor: pointer;
   height: 16px;
   width: 16px;
