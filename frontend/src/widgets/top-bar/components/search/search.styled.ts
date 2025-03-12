@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Image } from '../../../../components/constants';
 
 export const Wrapper = styled.div`
   flex: 1;
@@ -18,4 +19,4 @@ export const Input = styled.input`
   font-size: 18px;
 `;
 
-export const Img = styled.img``;
+export const Img = styled(Image)``;
