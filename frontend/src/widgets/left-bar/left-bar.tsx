@@ -12,7 +12,7 @@ const linkMap = [
     alt: 'Home icon',
   },
   {
-    link: '/',
+    link: '/create',
     img: '/general/create.svg',
     alt: 'Create icon',
   },
@@ -34,13 +34,13 @@ export const LeftBar = () => {
       <S.MenuIcons>
         {linkMap.map(({ link, img, alt }) => {
           return (
-            <S.MenuIcon key={img} href={link}>
+            <S.MenuIcon key={img} to={link}>
               <S.Logo path={img} alt={alt} />
             </S.MenuIcon>
           );
         })}
       </S.MenuIcons>
-      <S.MenuIcon href="/">
+      <S.MenuIcon to="/">
         <S.Logo path="/general/settings.svg" alt="messages setting" />
       </S.MenuIcon>
     </S.Wrapper>
