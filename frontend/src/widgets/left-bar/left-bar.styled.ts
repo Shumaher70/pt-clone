@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Image } from '../../components/constants';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   position: sticky;
@@ -21,7 +22,7 @@ export const MenuIcons = styled.div`
   row-gap: 24px;
 `;
 
-export const MenuIcon = styled.a`
+export const MenuIcon = styled(Link)`
   height: 48px;
   width: 48px;
   display: flex;
