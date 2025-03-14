@@ -3,7 +3,7 @@ import SearchPage from './search-page';
 
 export const searchRoutes = [
   {
-    path: '/:username',
+    path: '/search',
     element: <LayoutApp />,
     children: [{ path: '', element: <SearchPage /> }],
   },
