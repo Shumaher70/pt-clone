@@ -1,5 +1,7 @@
+import { PostCreate } from '../../features/constants';
+
 const CreatePage = () => {
-  return <div>CreatePage</div>;
+  return <PostCreate />;
 };
 
 export default CreatePage;
