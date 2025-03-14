@@ -1,4 +1,6 @@
+import { Profile } from '../../features/constants';
+
 const ProfilePage = () => {
-  return <div>ProfilePage</div>;
+  return <Profile />;
 };
 export default ProfilePage;
