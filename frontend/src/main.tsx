@@ -2,13 +2,17 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 
-import './index.css';
 import { AppRoutes } from './routes/routes.tsx';
+import { TanStackQueryProvider } from './providers/tan-stack-query-provider.tsx';
+
+import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+    <TanStackQueryProvider>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </TanStackQueryProvider>
   </StrictMode>
 );
