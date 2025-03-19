@@ -7,6 +7,7 @@ import commentRouter from './routes/user.route.js';
 import boardRouter from './routes/user.route.js';
 
 const app = express();
+app.use(express.json());
 
 app.use('/users', userRouter);
 app.use('/pins', pinRouter);
