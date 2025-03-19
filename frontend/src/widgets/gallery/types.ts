@@ -1,16 +1,13 @@
-export interface IItems {
-  id: number;
-  media: string;
-  height: number;
-  width: number;
-}
+import { IPin } from '../../components/types';
+
+export type TItems = Pick<IPin, '_id' | 'media' | 'width' | 'height'>;
 
 export interface IItemWrapper {
   height: number;
 }
 
 export interface IGalleryItemsProps {
-  item: IItems;
+  item: TItems;
 }
 
 export interface IOptimizedHeight {

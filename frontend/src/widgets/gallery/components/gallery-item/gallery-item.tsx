@@ -11,11 +11,12 @@ export const GalleryItem = ({ item }: IGalleryItemsProps) => {
     <S.ItemWrapper height={item.height}>
       <S.SIKImage
         path={item.media}
+        src={item.media}
         alt={item.media}
         width={372}
         height={height}
       />
-      <S.SLink to={`/pin/${item.id}`} />
+      <S.SLink to={`/pin/${item._id}`} />
       <S.SaveButton>Save</S.SaveButton>
       <S.OverlayIcons>
         <S.Button>

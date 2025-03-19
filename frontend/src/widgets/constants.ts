@@ -7,4 +7,14 @@ import { Collections } from './collection/collections';
 import { GalleryItem } from './gallery/components/gallery-item/gallery-item';
 import { optimizedHeight } from './gallery/components/gallery-item/utils/optimized-height';
 
-export { TopBar, Gallery, Collections, GalleryItem, LeftBar, optimizedHeight };
+import { useGetPins } from './gallery/api/use-get-pins';
+
+export {
+  TopBar,
+  Gallery,
+  LeftBar,
+  useGetPins,
+  GalleryItem,
+  Collections,
+  optimizedHeight,
+};

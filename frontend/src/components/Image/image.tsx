@@ -3,6 +3,7 @@ import { IImageProps } from '../types';
 
 export const Image = ({
   path,
+  src,
   alt,
   width,
   height,
@@ -16,6 +17,7 @@ export const Image = ({
       className={className}
       urlEndpoint={urlEndpoint}
       path={path}
+      src={src}
       alt={alt}
       loading="lazy"
       lqip={{ active: true, quality: 20 }}
