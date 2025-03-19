@@ -16,4 +16,4 @@ const boardSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.modal('Board', boardSchema);
+export default mongoose.model('Board', boardSchema);

@@ -6,7 +6,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    userName: {
+    username: {
       type: String,
       required: true,
     },
@@ -25,4 +25,4 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.modal('User', userSchema);
+export default mongoose.model('User', userSchema);
