@@ -1,8 +1,10 @@
 import { useRoutes } from 'react-router';
+
 import {
   authRoutes,
   homeRoutes,
   postRoutes,
+  errorRoutes,
   createRoutes,
   searchRoutes,
   profileRoutes,
@@ -13,6 +15,7 @@ export const AppRoutes = () => {
     ...authRoutes,
     ...homeRoutes,
     ...postRoutes,
+    ...errorRoutes,
     ...createRoutes,
     ...searchRoutes,
     ...profileRoutes,

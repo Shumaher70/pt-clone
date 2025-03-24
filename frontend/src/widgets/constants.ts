@@ -8,6 +8,7 @@ import { GalleryItem } from './gallery/components/gallery-item/gallery-item';
 import { optimizedHeight } from './gallery/components/gallery-item/utils/optimized-height';
 
 import { useGetPins } from './gallery/api/use-get-pins';
+import { GallerySkeleton } from './gallery/components/gallery-skeleton/gallery-skeleton';
 
 export {
   TopBar,
@@ -17,4 +18,5 @@ export {
   GalleryItem,
   Collections,
   optimizedHeight,
+  GallerySkeleton,
 };

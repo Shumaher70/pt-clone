@@ -12,7 +12,6 @@ export const GalleryItem = ({ item }: IGalleryItemsProps) => {
       <S.SIKImage
         path={item.media}
         src={item.media}
-        alt={item.media}
         width={372}
         height={height}
       />
