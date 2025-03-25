@@ -30,3 +30,7 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
+
+export const WrapperSpinner = styled.div`
+  padding: 20px 0;
+`;
