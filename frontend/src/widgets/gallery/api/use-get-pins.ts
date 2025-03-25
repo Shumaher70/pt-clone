@@ -1,12 +1,14 @@
 import axios from 'axios';
-import { useQuery, UseQueryResult } from '@tanstack/react-query';
+import { useInfiniteQuery } from '@tanstack/react-query';
 
-import { IPin } from '../../../components/types';
+interface IGetPins {
+  pageParam: number;
+}
 
-const getPins = async () => {
+const getPins = async ({ pageParam }: IGetPins) => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_ENDPOINT}/pins`
+      `${import.meta.env.VITE_API_ENDPOINT}/pins?cursor=${pageParam}`
     );
 
     if (response.status >= 200 && response.status < 300) {
@@ -17,11 +19,11 @@ const getPins = async () => {
   }
 };
 
-export const useGetPins = (): UseQueryResult<IPin[], Error> => {
-  return useQuery<IPin[], Error>({
+export const useGetPins = () => {
+  return useInfiniteQuery({
     queryKey: ['pins'],
     queryFn: getPins,
-    staleTime: 1000 * 60 * 5,
-    retry: 2,
+    initialPageParam: 0,
+    getNextPageParam: (lastPage) => lastPage.nextCursor,
   });
 };
