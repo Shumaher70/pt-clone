@@ -1,20 +1,37 @@
+import InfiniteScroll from 'react-infinite-scroll-component';
+
+import {
+  getAllPins,
+  useGetPins,
+  renderItems,
+  GallerySkeleton,
+} from '../constants';
+import { Spinner } from '../../components/constants';
+
+import { IPages } from './types';
+
 import * as S from './gallery.styled';
 
-import { TItems } from './types';
-
-import { GalleryItem, GallerySkeleton, useGetPins } from '../constants';
-
 export const Gallery = () => {
-  const { data, isPending } = useGetPins();
+  const { data, status, hasNextPage, fetchNextPage } = useGetPins();
 
-  const renderItems = data?.map((item: TItems) => (
-    <GalleryItem key={item._id} item={item} />
-  ));
+  const allPins = getAllPins(data?.pages as IPages[]);
 
   return (
-    <S.Wrapper>
-      {data && renderItems}
-      {isPending && <GallerySkeleton />}
-    </S.Wrapper>
+    <InfiniteScroll
+      dataLength={allPins.length}
+      next={fetchNextPage}
+      hasMore={!!hasNextPage}
+      loader={
+        <S.WrapperSpinner>
+          <Spinner />
+        </S.WrapperSpinner>
+      }
+    >
+      <S.Wrapper>
+        {data?.pages[0] && renderItems(allPins)}
+        {status === 'pending' && <GallerySkeleton />}
+      </S.Wrapper>
+    </InfiniteScroll>
   );
 };
