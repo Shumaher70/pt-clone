@@ -1,5 +1,6 @@
 import { TopBar } from './top-bar/top-bar';
 import { LeftBar } from './left-bar/left-bar';
+import { useValidateSearchInput } from './top-bar/components/search/hooks/use-validate-search-input';
 
 import { Gallery } from './gallery/gallery';
 import { Collections } from './collection/collections';
@@ -24,4 +25,5 @@ export {
   renderItems,
   optimizedHeight,
   GallerySkeleton,
+  useValidateSearchInput,
 };
